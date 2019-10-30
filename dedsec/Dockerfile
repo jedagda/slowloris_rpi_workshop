@@ -25,7 +25,7 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
 #echo "deb-src http://http.kali.org/kali kali-rolling main contrib non-free" >> /etc/apt/sources.list
 ENV DEBIAN_FRONTEND noninteractive
 
-# Copy the motd intro file to agent0 container
+# Copy the motd intro file to samsepi0l container
 COPY ./text-files/motd /etc/motd
 
 # Set up SSH server and add user with password

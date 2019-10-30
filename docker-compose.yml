@@ -22,7 +22,7 @@ services:
                 networks: 
                         - frontend
                         - backend
-                        - dedsec.net
+                        - dedsec
                 ports: 
                         - "80:80"
                 volumes: 
@@ -30,12 +30,12 @@ services:
                           source: public_html
                           target: ${WEB_DESTINATION_PATH}
         dedsec:
-                build: './dedsec.net/'
+                build: './dedsec/'
                 tty: true
-                container_name: agent0
-                hostname: dedsec.net
+                container_name: samsepi0l
+                hostname: dedsec
                 networks:
-                        - dedsec.net
+                        - dedsec
                 ports:
                         - "49154:22"
  
@@ -52,5 +52,5 @@ networks:
                driver: bridge
        backend:
                driver: bridge
-       dedsec.net:
+       dedsec:
                driver: bridge 
